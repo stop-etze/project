@@ -32,8 +32,8 @@
 
     <ImageView
         android:src="@android:drawable/ic_menu_gallery"
-        android:layout_width="400px"
-        android:layout_height="400px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="100px"
         android:layout_marginLeft="93.0dp"
         android:layout_below="@id/welcomeLabel"
