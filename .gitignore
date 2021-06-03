@@ -1,3 +1,5 @@
+.firebase*
+
 ## OSX artifacts
 .DS_Store
 
