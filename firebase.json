@@ -4,10 +4,10 @@
     "indexes": "firestore.indexes.json"
   },
   "hosting": {
-    "public": "web/html",
+    "public": "web",
     "ignore": [
-      "firebase.json",
 	  "**/server/**",
+      "**/.*",
       "**/node_modules/**"
     ]
   }

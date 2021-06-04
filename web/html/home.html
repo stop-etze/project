@@ -4,7 +4,9 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>stopit דף הבית</title>
+        <script src="../js/firebase-sdk.js"></script>
     </head>
     <body class="text-center">
+        <script>document.onload += 'document.write("Success Login, uid: " + firebase.auth().currentUser);';</script>
     </body>
 </html>
