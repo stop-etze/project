@@ -37,10 +37,11 @@ button {
 
 .emergency-icon {
     position: absolute;
-    bottom: 10%;
+    bottom: 5%;
 }
 
 .popup {
+    background-color: #f5f5f5;
     position: absolute;
-    bottom: 22%;
+    bottom: 18%;
 }
