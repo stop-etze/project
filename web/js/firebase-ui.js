@@ -454,7 +454,7 @@ w("firebaseui.auth.CredentialHelper.GOOGLE_YOLO","googleyolo");w("firebaseui.aut
  you may not use this file except in compliance with the License.
  You may obtain a copy of the License at
 
-      http://www.apache.org/licenses/LICENSE-2.0
+		http://www.apache.org/licenses/LICENSE-2.0
 
  Unless required by applicable law or agreed to in writing, software
  distributed under the License is distributed on an "AS IS" BASIS,
@@ -485,13 +485,13 @@ this.ca.addEventListener("focus",this.cg);this.ca.addEventListener("blur",this.b
  modification, are permitted provided that the following conditions are
  met:
 
-    * Redistributions of source code must retain the above copyright
+	 * Redistributions of source code must retain the above copyright
  notice, this list of conditions and the following disclaimer.
-    * Redistributions in binary form must reproduce the above
+	 * Redistributions in binary form must reproduce the above
  copyright notice, this list of conditions and the following disclaimer
  in the documentation and/or other materials provided with the
  distribution.
-    * Neither the name of Google Inc. nor the names of its
+	 * Neither the name of Google Inc. nor the names of its
  contributors may be used to endorse or promote products derived from
  this software without specific prior written permission.
 
@@ -523,19 +523,19 @@ e.jh;"function"===typeof define&&"amd"in define?define(function(){return e}):"ob
 
 var ui = new firebaseui.auth.AuthUI(firebase.auth());
 ui.start('#firebaseui-auth-container', {
-   signInSuccessUrl: 'home.html',
-   signInOptions: [
-      firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-      firebase.auth.EmailAuthProvider.PROVIDER_ID,
-      firebase.auth.GithubAuthProvider.PROVIDER_ID,
-      {
-         provider: firebase.auth.PhoneAuthProvider.PROVIDER_ID,
-         recaptchaParameters: {
-            size: 'invisible',
-            badge: 'inlint'
-         },
-         defaultCountry: 'IL',
-         defaultNationalNumber: '1234567890'
-      }
-   ],
+	signInSuccessUrl: 'home.html',
+	signInOptions: [
+		firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+		firebase.auth.EmailAuthProvider.PROVIDER_ID,
+		firebase.auth.GithubAuthProvider.PROVIDER_ID,
+		{
+			provider: firebase.auth.PhoneAuthProvider.PROVIDER_ID,
+			recaptchaParameters: {
+				size: 'invisible',
+				badge: 'inlint'
+			},
+			defaultCountry: 'IL',
+			defaultNationalNumber: '1234567890'
+		}
+	],
 });
