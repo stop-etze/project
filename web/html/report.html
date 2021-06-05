@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>StopIT!</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+        <link href="../css/main.css" rel="stylesheet">
+    </head>
+    <body class="text-center">
+        <form>
+            <h1 class="h3 mb-3 font-wait-normal">דיווח על מקרה</h1>
+            <label for="attackername" class="sr-only">שם הפוגע</label>
+            <input type="text" id="attackername" class="form-control" placeholder="" required autofocus>
+            
+            <label for="where" class="sr-only">מיקום/אפליקציה</label>
+            <input type="text" id="where" class="form-control" placeholder="" required>
+            
+            <label for="description" class="sr-only">תיאור המקרה</label>
+            <textarea id="description" class="form-control" rows="8" required></textarea>
+
+            <label for="formFileMultiple" class="form-label">הוספת תמונות</label>
+            <input class="form-control" type="file" id="formFileMultiple" multiple />
+
+            <br />
+
+            <button class="btn btn-lg btn-primary btn-block" type="submit">דווח</button>
+        </form>
+    </body>
+</html>
