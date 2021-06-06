@@ -527,6 +527,7 @@ ui.start('#firebaseui-auth-container', {
 	signInOptions: [
 		firebase.auth.GoogleAuthProvider.PROVIDER_ID,
 		firebase.auth.EmailAuthProvider.PROVIDER_ID,
+		firebase.auth.FacebookAuthProvider.PROVIDER_ID,
 		firebase.auth.GithubAuthProvider.PROVIDER_ID,
 		{
 			provider: firebase.auth.PhoneAuthProvider.PROVIDER_ID,
