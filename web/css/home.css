@@ -23,6 +23,10 @@ body {
 button {
     position: absolute;
     top: 26%;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 18px;
+    width: 200px;
+    height: 70px;
 }
 
 .progress-header {
@@ -35,9 +39,18 @@ button {
     left: 8%;
 }
 
+.settings-icon:hover {
+    color: #333638;
+}
+
 .emergency-icon {
+    color: #dc3545;
     position: absolute;
     bottom: 5%;
+}
+
+.emergency-icon:hover {
+    color:#bb2d3b;
 }
 
 .popup {
