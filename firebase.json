@@ -5,6 +5,10 @@
 	},
 	"hosting": {
 		"public": "web",
+		"rewrites": [{
+            "source": "/**/**",
+            "destination": "/"
+        }],
 		"ignore": [
 		"**/server/**",
 			"**/.*",
