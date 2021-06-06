@@ -6,11 +6,11 @@
 	"hosting": {
 		"public": "web",
 		"rewrites": [{
-            "source": "/**/**",
-            "destination": "/"
-        }],
+			"source": "/**",
+			"destination": "/html/index.html"
+		}],
+		"cleanUrls": true,
 		"ignore": [
-		"**/server/**",
 			"**/.*",
 			"**/node_modules/**"
 		]
