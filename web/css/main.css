@@ -31,6 +31,10 @@ h1, h2 {
     font-size: 94px;
 }
 
+.smt-btn {
+    width: 100%;
+}
+
 .stopit-header {
     font-family: 'Paytone One', sans-serif;
     font-size: 60px;
