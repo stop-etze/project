@@ -19,6 +19,7 @@ body {
     padding-top: 40px;
     padding-bottom: 40px;
     background-color: #f5f5f5;
+    overflow: hidden;
 }
 
 h1, h2 {
@@ -32,7 +33,14 @@ h1, h2 {
 }
 
 .smt-btn {
-    width: 100%;
+    float: right;
+    width: 70%;
+}
+
+.cancel-btn {
+    float: left;
+    width: 25%;
+    margin-right: 5%;
 }
 
 .stopit-header {
@@ -80,4 +88,35 @@ form input[type="password"] {
     margin-bottom: 10px;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
+}
+
+.typewriter {
+    width: 300px;
+    padding: 10px;
+    position: absolute;
+    top: 1%;
+}
+
+.typewriter h1 {
+    position: relative;
+    font-size: 500%;
+}
+
+.typewriter h1:after {
+    content: "";
+    width: 2px;
+    height: 130px;
+    background: #333;
+    position: absolute;
+    opacity: 0;
+    animation: cursor 0.5s infinite;
+}
+
+@keyframes cursor {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }

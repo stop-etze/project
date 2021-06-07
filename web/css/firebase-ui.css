@@ -18,12 +18,6 @@ dialog {
 	display: none;
 }
 
-.cancel {
-	display: block;
-    margin-left: auto;
-    margin-right: auto 
-}
-
 dialog[open] {
 	display: block;
 }

@@ -5,24 +5,32 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>StopIT!</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-		<link rel="icon" href="https://stop-etze.web.app/images/favicon.ico" type="image/ico">
-        <link href="https://stop-etze.web.app/css/main.css" rel="stylesheet">
+		<link rel="icon" href="../images/favicon.ico" type="image/ico">
+        <link href="../css/main.css" rel="stylesheet">
     </head>
     <body class="text-center">
         <form>
-            <h1 class="h3 mb-3 font-wait-normal">הגדרות</h1>
+            <h1 class="h1 mb-3 font-wait-normal">הגדרות</h1>
+
+            <br />
+
             <label for="fullname" class="sr-only">שם מלא</label>
             <input type="text" id="fullname" class="form-control" placeholder="" required autofocus>
             
+            <br />
+
             <label for="phone" class="sr-only">מספר טלפון</label>
             <input type="tel" id="phone" class="form-control" placeholder="" required>
             
+            <br />
+
             <label for="email" class="sr-only">אימייל</label>
             <input type="email" id="email" class="form-control" placeholder="" required>
 
             <br />
 
             <button class="btn btn-lg btn-primary btn-block smt-btn" type="submit">עדכן</button>
+            <button class="btn btn-lg btn-outline-danger cancel-btn" type="button">בטל</button>
         </form>
     </body>
 </html>
