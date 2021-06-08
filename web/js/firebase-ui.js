@@ -524,7 +524,6 @@ e.jh;"function"===typeof define&&"amd"in define?define(function(){return e}):"ob
 var ui = new firebaseui.auth.AuthUI(firebase.auth());
 ui.start('#firebaseui-auth-container', {
 	signInSuccessUrl: 'home.html',
-	signInFlow: 'popup',
 	signInOptions: [
 		firebase.auth.GoogleAuthProvider.PROVIDER_ID,
 		firebase.auth.EmailAuthProvider.PROVIDER_ID,

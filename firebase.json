@@ -6,6 +6,7 @@
   "hosting": [{
 	"public": "web",
 	"cleanUrls": true,
+	"trailingSlash": false,
 	"target": "english",
 	"ignore": [
 	  "firebase.json",
@@ -14,6 +15,7 @@
   }, {
     "public": "web",
 	"cleanUrls": true,
+	"trailingSlash": false,
 	"target": "default",
 	"ignore": [
 	  "firebase.json",
