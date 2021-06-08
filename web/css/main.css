@@ -24,17 +24,11 @@ body {
 
 h1, h2 {
     line-height: 1.45;
-    padding: 10px;
 }
 
 .welcome-header {
     font-family: 'Suez One', serif;
     font-size: 94px;
-}
-
-.insta-icon {
-    position: relative;
-    size: 50px;
 }
 
 .smt-btn {
@@ -46,13 +40,6 @@ h1, h2 {
     float: left;
     width: 25%;
     margin-right: 5%;
-}
-
-.stopit-header {
-    font-family: 'Paytone One', sans-serif;
-    font-size: 60px;
-    margin-top: 50px;
-    margin-bottom: 70px;
 }
 
 input, textarea {
