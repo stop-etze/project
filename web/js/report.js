@@ -1,14 +1,24 @@
 function report() {
+	var images_paths = [];
+
+	for(var file in document.getElementById("formFileMultiple").files) {
+		const ref = firebase.storage().ref().child('images');
+
+		ref.put(file).then((snapshot) => {
+			images_paths.append(ref.fullPath);
+		});
+	}
+
 	db.collection("reports").add({
-		atttacker_name: document.getElementById("attackername").value,
+		attacker_name: document.getElementById("attackername").value,
 		description: document.getElementById("description").value,
-		location: document.getElementById("where").value,
 		reporter: "/users/" + firebase.auth().currentUser.uid,
-		images: [],
-		time: firebase.firestore.Timestamp.now()
+		location: document.getElementById("where").value,
+		time: db.Timestamp.now(),
+		images: images_paths
 	}).then(() => {
 		location.href = "approve.html";
 	}).catch((error) => {
-		console.error("Error adding document: ", error);
+		alert(error);
 	});
 }
