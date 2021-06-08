@@ -1,18 +1,23 @@
 {
-	"firestore": {
-		"rules": "firestore.rules",
-		"indexes": "firestore.indexes.json"
-	},
-	"hosting": {
-		"public": "web",
-		"rewrites": [{
-			"source": "/**",
-			"destination": "/html/index.html"
-		}],
-		"cleanUrls": true,
-		"ignore": [
-			"**/.*",
-			"**/node_modules/**"
-		]
-	}
+  "firestore": {
+	"rules": "firestore.rules",
+	"indexes": "firestore.indexes.json"
+  },
+  "hosting": [{
+	"public": "web",
+	"cleanUrls": true,
+	"target": "english",
+	"ignore": [
+	  "firebase.json",
+	  "**/node_modules/**"
+	]
+  }, {
+    "public": "web",
+	"cleanUrls": true,
+	"target": "default",
+	"ignore": [
+	  "firebase.json",
+	  "**/node_modules/**"
+	]
+  }]
 }
