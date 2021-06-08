@@ -94,7 +94,7 @@ form input[type="password"] {
     width: 300px;
     padding: 10px;
     position: absolute;
-    top: 1%;
+    top: -2%;
 }
 
 .typewriter h1 {
@@ -119,4 +119,16 @@ form input[type="password"] {
     100% {
         opacity: 1;
     }
+}
+
+.approved-header {
+    position: absolute;
+    bottom: 25%;
+    width: 300px;
+}
+
+.report-number {
+    width: 100%;
+    position: absolute;
+    bottom: 5%;
 }

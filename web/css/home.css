@@ -23,15 +23,11 @@ body {
 
 button {
     position: absolute;
-    top: 26%;
+    top: 23%;
     font-family: 'Varela Round', sans-serif;
     font-size: 18px;
     width: 200px;
     height: 70px;
-}
-
-.progress-header {
-    font-family: 'Varela Round', sans-serif;
 }
 
 .settings-icon {
@@ -47,7 +43,7 @@ button {
 .emergency-icon {
     color: #dc3545;
     position: absolute;
-    bottom: 5%;
+    bottom: 1%;
 }
 
 .emergency-icon:hover {
