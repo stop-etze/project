@@ -32,6 +32,11 @@ h1, h2 {
     font-size: 94px;
 }
 
+.insta-icon {
+    position: relative;
+    size: 50px;
+}
+
 .smt-btn {
     float: right;
     width: 70%;
