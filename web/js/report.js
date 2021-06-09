@@ -4,8 +4,7 @@ function report() {
 		description: document.getElementById("description").value,
 		reporter: "/users/" + firebase.auth().currentUser.uid,
 		location: document.getElementById("where").value,
-		time: firebase.firestore.Timestamp.now(),
-		images: []
+		time: firebase.firestore.Timestamp.now()
 	}).then((snapshot) => {
 		var images_paths = [];
 		var storeageRef = firebase.storage().ref();
@@ -22,7 +21,7 @@ function report() {
 
 		while(files.length != images.length);
 
-		db.doc('reports/' + snapshot.id).set({
+		db.doc('reports/' + snapshot.id).update({
 			images: images_paths
 		}).then(function() {
 			location.href = "approve.html";
