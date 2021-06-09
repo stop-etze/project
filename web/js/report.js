@@ -16,7 +16,7 @@ function report() {
 			var ref = storeageRef.child(filePath);
 
 			ref.put(files[i]).then(() => {
-				images_paths.append(filePath);
+				images_paths.push(filePath);
 			});
 		}
 
