@@ -20,6 +20,8 @@ function report() {
 
 		Promise.all(uploads).then(function() {
 			location.href = "approve.html";
+		}).catch((error) => {
+			alert(error);
 		});
 	}).catch((error) => {
 		alert(error);
