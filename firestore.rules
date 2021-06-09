@@ -9,8 +9,8 @@ service cloud.firestore {
 
 		match /reports/{reportId} {
 			allow create: if request.auth != null;
-			allow read, update: if "/users/" + request.auth.uid == resource.data.reporter;
-			allow read, list, delete: if request.auth.uid == "ADMINNISSIMMALKA";
+			allow read: if "/users/" + request.auth.uid == resource.data.reporter;
+			allow read, list: if request.auth.uid == "ADMINNISSIMMALKA";
 		}
 	}
 }

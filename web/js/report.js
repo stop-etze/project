@@ -1,29 +1,24 @@
 function report() {
+	var files = document.getElementById("formFileMultiple").files;
+
 	db.collection("reports").add({
 		attacker_name: document.getElementById("attackername").value,
 		description: document.getElementById("description").value,
 		reporter: "/users/" + firebase.auth().currentUser.uid,
 		location: document.getElementById("where").value,
-		time: firebase.firestore.Timestamp.now()
+		time: firebase.firestore.Timestamp.now(),
+		images_count: files.length
 	}).then((snapshot) => {
-		var images_paths = [];
-		var storeageRef = firebase.storage().ref();
-		var files = document.getElementById("formFileMultiple").files;
+		var uploads = [];
+		var storageRef = firebase.storage().ref();
 
 		for(var i = 0; i < files.length; i++) {
 			var filePath = snapshot.id + "/" + i + '.' + files[i].name.split('.').slice(-1)[0];
-			var ref = storeageRef.child(filePath);
-
-			ref.put(files[i]).then(() => {
-				images_paths.push(filePath);
-			});
+			var ref = storageRef.child(filePath);
+			uploads.push(ref.put(files[i]));
 		}
 
-		while(files.length != images.length);
-
-		db.doc('reports/' + snapshot.id).update({
-			images: images_paths
-		}).then(function() {
+		Promise.all(uploads).then(function() {
 			location.href = "approve.html";
 		});
 	}).catch((error) => {
