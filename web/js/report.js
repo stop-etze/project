@@ -4,14 +4,15 @@ function report() {
 		description: document.getElementById("description").value,
 		reporter: "/users/" + firebase.auth().currentUser.uid,
 		location: document.getElementById("where").value,
-		time: firebase.firestore.Timestamp.now()
+		time: firebase.firestore.Timestamp.now(),
+		images: []
 	}).then((snapshot) => {
 		var images_paths = [];
 		var storeageRef = firebase.storage().ref();
 		var files = document.getElementById("formFileMultiple").files;
 
 		for(var i = 0; i < files.length; i++) {
-			var filePath = snapshot.id + "/" + i + files[i].name.split('.').slice(-1)[0];
+			var filePath = snapshot.id + "/" + i + '.' + files[i].name.split('.').slice(-1)[0];
 			var ref = storeageRef.child(filePath);
 
 			ref.put(files[i]).then(() => {
