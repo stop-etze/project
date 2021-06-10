@@ -9,3 +9,9 @@ function hideOrShow() {
 		document.getElementsByClassName("popup")[0].style.display = "block";
 	}
 }
+
+function loadProgress() {
+	db.collection.doc(`users/${firebase.auth().currentUser.id}`).get().then((doc) => {
+		document.getElementById('progressBar').src = `../html/progress-viewer.html?percent=${doc.data().progress}`;
+	});
+}
