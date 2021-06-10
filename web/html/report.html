@@ -27,15 +27,17 @@
 
 			<label for="description" class="sr-only">תיאור המקרה</label>
 			<textarea id="description" class="form-control" rows="8" required></textarea>
-
+			
 			<br />
+
+
 
 			<label for="formFileMultiple" class="sr-only">הוספת תמונות</label>
 			<input class="form-control" accept=".png,.webp,.jpg,.heic,.jpeg,.ico,.gif,.tif,.tiff,.bmp" type="file" id="formFileMultiple" multiple />
 
 			<br />
 
-			<button class="btn btn-lg btn-primary btn-block smt-btn" onclick="report();">דווח</button>
+			<button class="btn btn-lg btn-primary btn-block smt-btn" onclick="report(this);">דווח</button>
 			<button class="btn btn-lg btn-outline-danger cancel-btn" onclick='location.href = "../html/home.html";' type="button">בטל</button>
 		</div>
 	</body>
