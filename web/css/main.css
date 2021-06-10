@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Suez+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
 
-html,
-body {
+html, body {
 	height: 100%;
 }
 
@@ -123,19 +122,4 @@ form input[type="password"] {
 	width: 100%;
 	position: absolute;
 	bottom: 5%;
-}
-
-.loader {
-	-webkit-text-size-adjust: 100%;
-	font-family: Verdana,sans-serif;
-	font-size: 15px;
-	line-height: 1.5;
-	color: #000!important;
-	box-sizing: inherit;
-	border: 5px solid #f3f3f3;
-	animation: spin 1s linear infinite;
-	border-top: 5px solid #555;
-	border-radius: 50%;
-	width: 50px;
-	height: 50px;
 }
