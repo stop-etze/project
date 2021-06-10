@@ -1,7 +1,7 @@
 function report(buttonElement) {
 	var files = document.getElementById("formFileMultiple").files;
 	buttonClone = JSON.parse(JSON.stringify(buttonElement));
-	buttonElement.outerHTML = `<button class="btn btn-primary smt-btn" type="button" disabled><span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>מדווח...</button>`;
+	buttonElement.outerHTML = `<button class="btn btn-lg btn-primary smt-btn" type="button" disabled><span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> ... מדווח</button>`;
 
 	db.collection("reports").add({
 		attacker_name: document.getElementById("attackername").value,
