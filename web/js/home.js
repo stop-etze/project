@@ -1,11 +1,7 @@
 function hideOrShow() {
-	setViewState(document.getElementsByClassName("popup")[0].style.display == "block");
-}
-
-function setViewState(shouldHide) {
-	if(shouldHide) {
+	if(document.getElementsByClassName("popup")[0].style.display == "block") {
 		document.getElementById('progressBar').style.display = "";
-		document.getElementById('reportButton').style.display = "block";
+		document.getElementById('reportButton').style.display = "";
 		document.getElementsByClassName("popup")[0].style.display = "none";
 	} else {
 		document.getElementById('progressBar').style.display = "none";
