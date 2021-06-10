@@ -2,10 +2,8 @@ rules_version = '2';
 service cloud.firestore {
 	match /databases/{database}/documents {
 		match /users/{userId} {
-		//TO DO: only ADMIN can update progress
 			allow read: if request.auth != null && request.auth.uid == userId;
-			allow read, list, delete, update: if request.auth.uid == "ADMINid";
-			allow update: if request.auth != null && request.auth.uid == userId;
+			allow read, list, update: if request.auth.uid == "ADMINid";
 		}
 
 		match /reports/{reportId} {
