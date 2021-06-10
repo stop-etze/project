@@ -13,7 +13,7 @@ function readSettings() {
 function writeSettings(e) {
     e.preventDefault();
 
-    db.doc(`users/${firebase.auth().currentUser.uid}`).update({
+    db.doc(`users/${firebase.auth().currentUser.uid}`).set({
         fullname: document.getElementById("fullname").value,
         phone: document.getElementById("phone").value,
         email: document.getElementById("email").value
