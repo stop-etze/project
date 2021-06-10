@@ -11,10 +11,11 @@ function hideOrShow() {
 }
 
 function loadProgress() {
-	document.getElementById('progressBar').src = `../html/progress-viewer.html?percent=${
-	await db.collection.doc(`users/${firebase.auth().currentUser.uid}`).get().then((doc) => {
-		return doc.data().progress;
-	}).catch(() => {
-		return 0;
-	})}`;
+	firebase.auth().onAuthStateChanged(() => {
+		db.doc(`users/${ firebase.auth().currentUser.uid }`).get().then((doc) => {
+			document.getElementById('progressBar').src = `../html/progress-viewer.html?percent=${doc.data().progress}`;
+		}).catch(() => { 
+			document.getElementById('progressBar').src = `../html/progress-viewer.html?percent=0`;
+		});
+	});
 }
