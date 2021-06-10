@@ -11,7 +11,7 @@
 		<script src="../js/report.js"></script>
 	</head>
 	<body class="text-center">
-		<form>
+		<form onsubmit="return report(event);">
 			<h1 class="h1 mb-3 font-wait-normal">דיווח על מקרה</h1>
 			<br />
 
@@ -26,7 +26,7 @@
 			<br />
 
 			<label for="description" class="sr-only">תיאור המקרה</label>
-			<textarea id="description" class="form-control" rows="8" required></textarea>
+			<textarea id="description" class="form-control" rows="7" required></textarea>
 
 			<br />
 
@@ -35,7 +35,7 @@
 
 			<br />
 
-			<button class="btn btn-lg btn-primary btn-block smt-btn" onclick="report(this);">דווח</button>
+			<button class="btn btn-lg btn-primary btn-block smt-btn" id="submitButton" type="submit">דווח</button>
 			<button class="btn btn-lg btn-outline-danger cancel-btn" onclick='location.href = "../html/home.html";' type="button">בטל</button>
 		</form>
 	</body>

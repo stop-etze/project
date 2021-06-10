@@ -1,5 +1,8 @@
-function report(buttonElement) {
+function report(e) {
 	var files = document.getElementById("formFileMultiple").files;
+	var buttonElement = document.getElementById('submitButton');
+	e.preventDefault();
+
 	buttonClone = JSON.parse(JSON.stringify(buttonElement));
 	buttonElement.outerHTML = `<button class="btn btn-lg btn-primary smt-btn" type="button" disabled><span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> ... מדווח</button>`;
 
@@ -31,4 +34,6 @@ function report(buttonElement) {
 		buttonElement.outerHTML = buttonClone.outerHTML;
 		alert(error);
 	});
+
+	return false;
 }
