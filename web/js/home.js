@@ -13,7 +13,7 @@ function hideOrShow() {
 function loadProgress() {
 	firebase.auth().onAuthStateChanged(() => {
 		db.doc(`users/${ firebase.auth().currentUser.uid }`).get().then((doc) => {
-			document.getElementById('progressBar').src = `../html/progress-viewer.html?percent=${doc.data().progress}`;
+			document.getElementById('progressBar').src = `../html/progress-viewer.html?percent=${doc.data().progress ? doc.data().progress : 0}`;
 		}).catch(() => { 
 			document.getElementById('progressBar').src = `../html/progress-viewer.html?percent=0`;
 		});
