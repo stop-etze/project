@@ -50,14 +50,14 @@ label {
 	float: right;
 }
 
-form {
+.settings-form {
 	width: 100%;
 	max-width: 330px;
 	padding: 15px;
 	margin: 0 auto;
 }
 
-form .form-control {
+.settings-form .form-control {
 	position: relative;
 	box-sizing: border-box;
 	height: auto;
@@ -65,17 +65,17 @@ form .form-control {
 	font-size: 16px;
 }
 
-form .form-control:focus {
+.settings-form .form-control:focus {
 	z-index: 2;
 }
 
-form input[type="email"] {
+.settings-form input[type="email"] {
 	margin-bottom: -1px;
 	border-bottom-right-radius: 0;
 	border-bottom-left-radius: 0;
 }
 
-form input[type="password"] {
+.settings-form input[type="password"] {
 	margin-bottom: 10px;
 	border-top-left-radius: 0;
 	border-top-right-radius: 0;
