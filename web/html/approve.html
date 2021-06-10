@@ -4,22 +4,26 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<title>StopIT!</title>
+
 		<link rel="icon" href="../images/favicon.ico" type="image/ico">
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
         <link href="../css/main.css" rel="stylesheet">
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="../js/firebase-sdk.js"></script>
+        <script src="../js/approve.js"></script>
 	</head>
-	<body class="text-center" style="direction: rtl;">
+	<body class="text-center" style="direction: rtl;" onload="updateReportNumber();">
         <div class="typewriter">
             <h1>תודה על הדיווח.</h1>
         </div>
 
 		<h2 class="h2 mb-3 font-wait-normal approved-header">נחזור אליך בהקדם האפשרי</h2>
 
-		<div class="card text-white bg-dark mb-3 report-number" style="max-width: 18rem;">
+		<div id='cardContainer' class="card text-white bg-dark mb-3 report-number" style="display: none; max-width: 18rem;">
 			<div class="card-header">מספר הפנייה</div>
 			<div class="card-body">
-				<h5 class="card-title">10</h5>
+				<h5 id='cardCount' class="card-title">0</h5>
 			</div>
 		</div>
 	</body>
@@ -34,10 +38,9 @@
 			var text = $(h1).text();
 			$(h1).text("");
 			var i = 0;
-			var len = text.length;
 
 			setInterval(function() {
-				if(i < len) {
+				if(i < text.length) {
 					$(h1).append(text[i]);
 					i++;
 				}

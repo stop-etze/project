@@ -19,9 +19,11 @@ function report() {
 		}
 
 		Promise.all(uploads).then(function() {
-			location.href = "approve.html";
-		}).catch((error) => {
-			alert(error);
+			db.doc('reports/REPORTS_COUNTER').update({
+				count: firebase.firestore.FieldValue.increment(1)
+			}).then(function() {
+				location.href = "approve.html";
+			});
 		});
 	}).catch((error) => {
 		alert(error);

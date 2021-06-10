@@ -1,8 +1,9 @@
 rules_version = '2';
+
 service cloud.firestore {
 	match /databases/{database}/documents {
 		match /users/{userId} {
-			//TO DO: only ADMIN can update progress
+		//TO DO: only ADMIN can update progress
 			allow read: if request.auth != null && request.auth.uid == userId;
 			allow update: if request.auth != null && request.auth.uid == userId;
 			allow read, list, delete, update: if request.auth.uid == "ADMINid";
@@ -10,7 +11,8 @@ service cloud.firestore {
 
 		match /reports/{reportId} {
 			allow create: if request.auth != null && "/users/" + request.auth.uid == request.resource.data.reporter;
-			allow read, update: if "/users/" + request.auth.uid == resource.data.reporter;
+			allow write, read: if request.auth != null && reportId == "REPORTS_COUNTER";
+			allow read: if "/users/" + request.auth.uid == resource.data.reporter;
 			allow read, list, delete: if request.auth.uid == "ADMINid";
 		}
 	}
