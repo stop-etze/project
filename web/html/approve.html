@@ -14,13 +14,21 @@
         <script src="../js/approve.js"></script>
 	</head>
 	<body class="text-center" style="direction: rtl;" onload="updateReportNumber();">
+		<button onclick="location.href = `../html/home.html`;" style="transform: scale(1.5);position: absolute; top: 60%;" class="btn btn-secondary">
+			<svg xmlns="../images/pattern.xml" width="16" height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+				<path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+				<path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+			</svg>
+			חזור אל דף הבית
+		</button>
+
         <div class="typewriter">
             <h1>תודה על הדיווח.</h1>
         </div>
 
-		<h2 class="h2 mb-3 font-wait-normal approved-header">נחזור אליך בהקדם האפשרי</h2>
+		<h2 class="h2 mb-3 font-wait-normal approved-header">נחזור אליך בהקדם</h2>
 
-		<div id='cardContainer' class="card text-white bg-dark mb-3 report-number" style="display: none; max-width: 18rem;">
+		<div id='cardContainer' class="card text-white bg-dark mb-3 report-number" style="display: block; max-width: 18rem;">
 			<div class="card-header">מספר הפנייה</div>
 			<div class="card-body">
 				<h5 id='cardCount' class="card-title">0</h5>
